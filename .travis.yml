@@ -6,7 +6,7 @@ cache:
   - node_modules
 before_deploy:
   - npm install now --no-save
-  - now rm helloworld
+  - now rm helloworld --token $NOW_TOKEN
 deploy:
 - provider: script
   script: now --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN
